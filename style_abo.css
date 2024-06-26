@@ -1,0 +1,210 @@
+@font-face {
+    font-family: 'Freesentation-3Light';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2404@1.0/Freesentation.woff2') format('woff2');
+    font-weight: 300; 
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Freesentation-4Regular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2404@1.0/Freesentation-4Regular.woff2') format('woff2');
+    font-weight: 400; 
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Freesentation-5Midium';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2404@1.0/Freesentation-5Midium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Freesentation-7Bold';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2404@1.0/Freesentation-7Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* left */
+
+.left{
+    width: 30px;
+    margin-left: 10%;
+    margin-top: 5%;
+}
+.left .img{
+    height: 60vh;
+    width: 48vh;
+    border-radius: 40%;
+    float: left;
+    background-color: rgb(233, 241, 247);
+    background-image: url(img/seyeon_face.jpg);
+    background-size: 50vh;
+    background-position: -1vh;
+}
+
+/* right */
+
+.right{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 10%;
+}
+
+/* name */
+.right .name h1{
+    font-size: 64px;
+    float: left;
+    font-weight: 700;
+    font-family: 'Freesentation-7Bold';
+}
+.right .name .pub{
+    margin: 10px;
+    margin-left: 12vw;
+}
+.right .name .pub h3{
+    font-size: 32px;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+    font-family: 'Freesentation-4Regular';
+}
+.right .name .pub p{
+    margin: 0;
+    padding: 0;
+    font-family: 'Freesentation-3Light';
+}
+.name.mobile{
+    display: none;
+}
+
+/* tag */
+
+.right .tag{
+    font-size: 20px;
+    margin: 2vh 0;
+}
+.right .tag p{
+    background-color: #f3f3f3;
+    border-radius: 13px;
+    padding: 1vh 3vh;
+    float: left;
+    margin: .5vh;
+    font-family: 'Freesentation-3Light';
+}
+
+/* edu */
+
+.right .edu{
+    margin-top: 35px;
+}
+.right .edu .title h3{
+    font-size: 30px;
+    font-family: 'Freesentation-7Bold';
+}
+.right .edu .text .box{
+    margin: 20px;
+}
+.right .edu .text .box h3{
+    font-size: 24px;
+    font-family: 'Freesentation-5Midium';
+}
+.right .edu .text .box ul{
+    font-size: 20px;
+    padding: 10px;
+    margin-left: 3vw;
+        font-family: 'Freesentation-4Regular';
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+.hidden {
+    opacity: 0;
+}
+.animated-left {
+    animation: fadeInLeft 1s ease forwards;
+}
+
+.animated-right {
+    animation: fadeInRight 1s ease forwards;
+}
+
+.img, .name, .tag, .edu{
+    opacity: 0;
+}
+
+@media screen and (max-width:991px) {
+    .left .img{
+        width: 20vh;
+        height: 28vh;
+        background-size: 23vh;
+        background-position: -1vh;
+        margin-top: 8vh;;
+    }
+    .left{
+        float: left;
+    }
+    .name.pc{
+        display: none;
+    }
+    .name.mobile{
+        display: block;
+        position: absolute;
+        top: 55%;
+        margin-left: -8vh;
+    }
+    .name.mobile .pub p{
+        margin-top: 5.4vh;
+        margin-left: 38%;
+    }
+    .name.mobile .pub h3{
+        margin-left: -6.5vh;
+    } 
+    .tag{
+        position: absolute;
+        top: 22%;
+        left: 53%;
+        border-radius: 5vh;
+    }
+    .tag p{
+        font-size: 1.7vh;
+        width: 13vh;
+        height: 3vh;
+
+    }
+    .right .edu{
+        position: absolute;
+        top: 68%;
+        margin-left: -9vh;
+    }
+    .right .edu ul{
+        width: 100%;
+    }
+
+}
