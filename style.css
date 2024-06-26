@@ -29,7 +29,6 @@
     font-style: normal;
 }
 
-
 *{
     margin: 0;
     padding: 0;
@@ -45,6 +44,7 @@ body {
 .content{
     display: flex;
     padding-top: 5%;
+    margin-left: 15%;
 }
 
 .content .left{
@@ -54,7 +54,7 @@ body {
     gap: 20px;
     padding: 5%;
     width: calc(50%-20px);
-    margin-left: 7vh;
+    /* margin-left: 10%; */
 }
 .content .left .title{
     width: 100%;
@@ -98,7 +98,9 @@ body {
 }
 .slide-wrap {
     margin: 5% auto 0;
-    width: 50%;
+    width: 80vh;
+    height: 50vh;
+    margin-left: 20%;
     border: 1px solid rgb(235, 235, 235);
     border-radius: 3px;
 }
